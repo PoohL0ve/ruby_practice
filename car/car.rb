@@ -31,6 +31,10 @@ class Car
         self.color = color
         puts "You car is being painted #{color}"
     end
+
+    def to_s
+        "You drive a #{@color} #{model} made in #{@year}."
+    end
 end 
 
 
@@ -40,7 +44,7 @@ user_model = gets.chomp
 user_year = gets.chomp
 user_color = gets.chomp
 puts user_model, user_year, user_color
-my_car = Car.new(user_model, user_color, user_year)
+my_car = Car.new(user_model, user_year, user_color)
 
 # using the instance methods
 #puts my_car.current_speed
@@ -52,6 +56,8 @@ my_car = Car.new(user_model, user_color, user_year)
 #my_car.slow_down(user_slowing.to_i)
 #my_car.stop
 
-puts my_car.color
-my_car.spray_paint("Midnight")
-puts my_car.color
+#puts my_car.color
+#my_car.spray_paint("Midnight")
+#puts my_car.color
+
+puts my_car 
